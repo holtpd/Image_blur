@@ -1,5 +1,3 @@
-require 'pry'
-
 class Image
   attr_accessor :image
   def initialize(input_array)
