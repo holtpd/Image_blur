@@ -32,10 +32,11 @@ end
       @image[row][col -1] = 1 unless col == 0 #left
       @image[row][col +1] = 1 unless col == @image[row].count - 1 #right
       @image[row -1][col] = 1 unless row == 0 #top
-      @image[row +1][col] = 1 unless row <= @image[row].count - 1 #bottom
+      @image[row -1][col] = 1 unless row == @image[row].count + 1 #bottom
+     # binding.pry
     end
 
-    output_image
+     output_image
 
   end
 end
@@ -52,5 +53,6 @@ image = Image.new([
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ])
 
-# image.output_image
+image.output_image
+puts
 image.image_blur
