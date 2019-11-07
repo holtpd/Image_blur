@@ -32,12 +32,9 @@ end
       @image[row][col -1] = 1 unless col == 0 #left
       @image[row][col +1] = 1 unless col == @image[row].count - 1 #right
       @image[row -1][col] = 1 unless row == 0 #top
-      @image[row -1][col] = 1 unless row == @image[row].count + 1 #bottom
-     # binding.pry
+      @image[row +1][col] = 1 unless row == @image[row].count + 1 #bottom
     end
-
      output_image
-
   end
 end
 
